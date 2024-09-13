@@ -1,0 +1,575 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+
+@font-face {
+    font-family: contato;
+    src: url(fontes/bubblegum-sans-regular.otf);
+    font-weight: normal;
+}
+
+/*Comentários*/
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor1: #314569;
+    /* cor de títulos*/
+    --cor2: #d1d0db;
+    /*cor dos botões*/
+    --cor3: #343538;
+    /*fundo do menu*/
+    --titulo: "Pirata One", system-ui;
+    /*variável de fonte*/
+    --cor4: #a9a9a9;
+    /* borda do menu */
+    --cor5: #ff0000;
+    /*cor topo*/
+
+}
+
+body {
+    background: #FFF;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: "Pirata One", system-ui;
+    text-align: center;
+    color: #ff0000;
+    font-size: 2.3em;
+}
+
+.layout {
+    margin: 0 auto;
+
+}
+
+.btn_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background: var(--cor1);
+    color: var(--cor2);
+    font-size: 1.1em;
+    padding: 7px;
+    margin: 0px 5px 15px 5px;
+    border-radius: 10px;
+}
+
+/*Página Vídeo*/
+.flex2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#rodape {
+    clear: both;
+}
+
+/*______________________________________________________________________________*/
+/*Explicação Media Query*/
+
+
+
+
+/*Smartphone Portrait - em pé*/
+
+/*menu*/
+
+.header {
+    height: 60px;
+}
+
+.logo img {
+    padding: 5px 10px;
+}
+
+#check {
+    display: none;
+}
+
+.label_menu {
+    font-size: 3em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    background: var(--cor3);
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    right: -100%;
+    font-family: var(--titulo);
+}
+
+#check:checked~ul {
+    right: 0;
+}
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor4);
+}
+
+/*BANER - esconder banner*/
+.anime1,
+.anime2 {
+    display: none;
+}
+
+/*FORMULÁRIO*/
+
+.form {
+    font-family: var(--titulo);
+}
+
+.form p {
+    font-size: 1em;
+}
+
+#rodape {
+    text-align: center;
+}
+
+
+#usuario,
+#endereco,
+#mensagem,
+#pedido,
+#sexo {
+    border: 1px solid var(--cor4);
+    width: 340px;
+    margin: 15px 5px;
+    padding: 5px;
+}
+
+#sexo {
+    width: 280px;
+}
+
+legend {
+    font-size: 1.3em;
+}
+
+input,
+select {
+    height: 2em;
+    border: none;
+    margin: 5px;
+    padding: 2px;
+    background: #e5e5e6;
+}
+
+textarea {
+    margin-top: 15px;
+}
+
+#rodape {
+    text-align: center;
+}
+
+/* Página Vídeo*/
+#filme {
+    height: 30vh;
+    margin-bottom: 15px;
+}
+
+#musica {
+    margin-bottom: 15px;
+}
+
+/*Página Fotos*/
+#fotos {
+    display: flex;
+    flex-direction: column;
+}
+
+.galeria {
+    width: 82vw;
+    list-style: none;
+    margin: 30px auto;
+}
+
+.galeria li span {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    color: var(--cor2);
+}
+
+.galeria li {
+    justify-content: center;
+    margin: 10px;
+}
+
+.galeria img {
+    background: var(--cor4);
+    padding: 5px;
+    width: 280px;
+    height: 200px;
+}
+
+.aumentar:hover {
+    transform: scale(1.3);
+}
+
+
+
+
+
+/*Smartphone landscape - deitado*/
+@media(min-width: 576px) {
+
+    .layout {
+        max-width: 540px;
+
+    }
+
+    /*BANNER*/
+    .anime1,
+    .anime2 {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .anime2 {
+        display: inline;
+    }
+
+    /*FORMULÁRIO*/
+    #usuario,
+    #endereco,
+    #mensagem,
+    #pedido,
+    #sexo {
+        width: 520px;
+    }
+
+    .rodape {
+        text-align: center;
+    }
+
+    /*Pagina Video*/
+    #filme {
+        height: 78vh;
+    }
+
+    /*Página foto*/
+    .galeria {
+        width: 85vw;
+    }
+
+    .galeria li {
+        text-align: center;
+    }
+
+    .galeria img {
+        width: 280px;
+        height: 210px;
+    }
+
+    .galeria span {
+        display: none;
+    }
+}
+
+
+/*Tablet Portrait - em pé*/
+@media(min-width: 768px) {
+
+    .layout {
+        max-width: 720px;
+
+    }
+
+    .anime1 {
+        display: inline;
+    }
+
+    .anime2 {
+        display: none;
+    }
+
+    /*FORMULARIO*/
+    #usuario,
+    #endereco,
+    #mensagem,
+    #pedido {
+        width: 720px;
+    }
+
+    #usuario {
+        background: url(img/icontato.png) no-repeat 95% 95%;
+    }
+
+    #endereco {
+        background: url(img/iendereco.png) no-repeat 95% 95%;
+    }
+
+    #mensagem {
+        background: url(img/imensagem.png) no-repeat 95% 95%;
+    }
+
+    #pedido {
+        background: url(img/ipgto.png) no-repeat 95% 95%;
+    }
+
+    /*Páginba Vídeo*/
+    #filme {
+        height: 38vh;
+    }
+
+    /*Páginba foto*/
+    .foto {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .galeria {
+        width: 81vw;
+    }
+
+    .galeria li {
+        text-align: center;
+        float: left;
+    }
+
+}
+
+
+/*Tablet landscape - deitado*/
+@media(min-width: 992px) {
+    .layout {
+        max-width: 960px;
+
+    }
+
+    /*BAnner*/
+    .banner {
+        height: 36vh;
+    }
+
+    /*FORMULARIO*/
+    #usuario,
+    #endereco,
+    #mensagem,
+    #pedido {
+        width: 940px;
+    }
+
+    /*Pagina Video*/
+    #filme {
+        height: 65vh;
+    }
+
+    /*Página Foto*/
+    .galeria {
+        width: 61vw;
+    }
+}
+
+/*PC*/
+@media(min-width: 1200px) {
+
+    .layout {
+        max-width: 1140px;
+        }
+
+    .header {
+        height: 90px;
+    }
+
+    .logo img {
+        margin: 20px 0px 0px 10px;
+    }
+
+    .label_menu {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        height: auto;
+        background: transparent;
+        margin-top: 30px;
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: var(--cor2);
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        color: var(--cor4);
+    }
+
+    .banner {
+        height: 45vh;
+    }
+
+    .banner-anime {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 350px;
+        margin: 0;
+
+    }
+
+    .anime1,
+    .anime2 {
+        max-width: 100%;
+        height: auto;
+        display: block;
+
+    }
+
+    .banner-anime img {
+        position: absolute;
+        transition-property: opacity;
+        transition-duration: 1s;
+        transition-timing-function: linear;
+        /* ease, linear, ease-in, ease-out, aliviar-in-out, cubico-bizier*/
+    }
+
+    .anime1,
+    .anime2:hover {
+        opacity: 1;
+    }
+
+    .anime1:hover,
+    .anime2 {
+        opacity: 0;
+    }
+
+    h1 {
+        margin-top: 20px;
+        
+    }
+
+    /*FORMULARIO*/
+    #usuario,
+    #endereco,
+    #mensagem,
+    #pedido {
+        width: 900px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    /*RODPE*/
+    .flex {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    /*Páginba Vídeo*/
+    .radio-tv {
+        height: 100vh;
+        width: 150vw;
+        background: url(img/radio-tv.png) no-repeat;
+        margin: 5px auto;
+    }
+
+    #filme {
+        width: 30vw;
+        height: 55vh;
+        position: relative;
+        display: block;
+        margin-right: 530px;
+        margin-top: -180px;
+    }
+
+    #musica {
+        position: relative;
+        display: block;
+        margin: 100px 0px 0px 305px;
+    }
+
+    /*Página Foto*/
+    .galeria {
+        width: 71vw;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*________________________________________________________________*/
+/*Explicação Flexbox*/
+.containerrrr {
+
+    height: 500px;
+    background: #f6f7f3;
+    display: flex;
+    /*(pai)*/
+    flex-flow: row wrap;
+    /* o mais recomendado*/
+    /*flex-direction: row; /*row, ro-reverse, column, column-reverse(pai)*/
+    /*flex-wrap: wrap; nowrap, wrap, wrap-reverse(pai)*/
+    justify-content: center;
+    /*(flex)start, end, center (space) evelyn, between, around */
+    align-items: center;
+    gap: 5px;
+}
+
+.itenssss {
+    width: 150px;
+    height: 100px;
+    background: #314569;
+    border: 1px solid #000000;
+    font-size: 2em;
+    /*flex: auto;*/
+}
+
+.ola5555 {
+    flex-grow: 5;
+}
